@@ -1,0 +1,14 @@
+# Colab install list: pinned to match uv.lock (the local Mac environment).
+# torch, numpy, pandas and matplotlib are deliberately NOT listed: use Colab's preinstalled
+# builds, which match its CUDA. Regenerate after changing pyproject.toml:
+#   uv export --no-dev --no-hashes --no-emit-project | grep -E "^(<names below>)=="
+transformers==5.20.2
+tokenizers==0.23.3
+huggingface-hub==2.2.0
+safetensors==0.8.0
+datasets==5.1.0
+evaluate==0.4.6
+accelerate==1.15.0
+scikit-learn==1.9.1
+scipy==1.18.1
+seaborn==0.13.2

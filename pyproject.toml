@@ -1,0 +1,30 @@
+[project]
+name = "token-redundancy"
+version = "0.1.0"
+description = "Does attention-head pruning change token redundancy in BERT? (see project_plan.md)"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.15.0",
+    "datasets>=5.1.0",
+    "evaluate>=0.4.6",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "scikit-learn>=1.9.1",
+    "scipy>=1.18.1",
+    "seaborn>=0.13.2",
+    "torch>=2.14.1",
+    "tqdm>=4.70.1",
+    # Pinned exactly: removal.py and heads.py call BERT internals that change between releases.
+    "transformers==5.20.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.3,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "pytest>=9.1.1",
+]

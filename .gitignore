@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Model checkpoints and results live in Google Drive (Colab) or outputs/ (local)
+outputs/
+checkpoints/
+results/
+*.safetensors
+*.pt
